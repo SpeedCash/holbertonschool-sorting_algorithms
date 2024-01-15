@@ -26,12 +26,12 @@ void selection_sort(int *array, size_t size)
 				minimum_index = i;
 			}
 		}
-			if (minimum_index != i)
-			{
-				temporary = array[index];
-				array[index] = array[minimum_index];
-				array[minimum_index] = temporary;
-				print_array(array, size);
-			}
+		if (minimum_index != index)
+		{
+			temporary = array[index];
+			array[index] = array[minimum_index];
+			array[minimum_index] = temporary;
+			print_array(array, size);
+		}
 	}
 }
