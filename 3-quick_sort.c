@@ -25,11 +25,12 @@ int lomuto_partition(int *array, size_t size, int lo, int hi)
 {
 	int pivot = array[hi];
 	int i = lo;
+	int j;
 
 	if (array == NULL || size < 2)
-		return;
+		return (-1);
 
-	for (int j = lo; j < hi; j++)
+	for (j = lo; j < hi; j++)
 	{
 		if (array[j] < pivot)
 		{
@@ -58,9 +59,11 @@ int lomuto_partition(int *array, size_t size, int lo, int hi)
  */
 void quick_sort_recursion(int *array, size_t size, int lo, int hi)
 {
+	int p;
+
 	if (lo < hi)
 	{
-		int p = lomuto_partition(array, size, lo, hi);
+		p = lomuto_partition(array, size, lo, hi);
 
 		quick_sort_recursion(array, size, lo, p - 1);
 		quick_sort_recursion(array, size, p + 1, hi);
