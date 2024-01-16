@@ -27,7 +27,4 @@ void swap_ints(int *a, int *b);
 int lomuto_partition(int *array, size_t size, int lo, int hi);
 void quick_sort_recursion(int *array, size_t size, int lo, int hi);
 
-
-
-
 #endif
